@@ -9,13 +9,13 @@ import aiRoutes from "./routes/ai.js";
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-const cors = require("cors");
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
       "https://ratefluencer.vercel.app",
     ],
+    credentials: true,
   })
 );
 app.use(express.json());
